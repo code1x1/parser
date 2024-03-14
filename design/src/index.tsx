@@ -15,9 +15,7 @@ const IndexAppProps = {
   list: {
     value: [""],
     description: "list mit strings",
-    default: "['']"
-  },
-  onAction: {
-    value: null
+    default: "['']",
+    xyz: "sss"
   }
 };

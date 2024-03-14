@@ -38,6 +38,9 @@ for (const file of componentsDirectory) {
       for (const interfaceProperty of declaration.body.body) {
         if (
           namedTypes.TSPropertySignature.check(interfaceProperty) &&
+          !namedTypes.TSFunctionType.check(
+            interfaceProperty.typeAnnotation?.typeAnnotation
+          ) &&
           namedTypes.Identifier.check(interfaceProperty.key)
         ) {
           const properties = [
